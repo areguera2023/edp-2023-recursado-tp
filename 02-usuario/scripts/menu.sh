@@ -1,16 +1,33 @@
-PS3='Elija>'
+while true; do
 
 echo "Hola, soy el menu del TP. Que quiere hacer?"
+PS3='Elija>'
+
 select opcion in "Clasificar archivos" "Monitorear Sistema" "Analizar Textos" "Salir"
 do
 
-[ -z $opcion ] && echo "Elegir opcion valida." && continue
-[ $REPLY == 1 ] && clasificar && continue
-[ $REPLY == 2 ] && echo "Elijo Monitorear el Sistema" && continue
-[ $REPLY == 3 ] && echo "Analizar Texto" && continue
-[ $REPLY == 4 ] && echo "Salir" && break
-echo "Opcion elegida:  "  $opcion
+case "$opcion" in
+    "Clasificar archivos")
+        ./clasificador.sh
+        ;;
+    "Monitorear Sistema")
+        echo "Elijo Monitorear el Sistema"
+        ./monitor.sh
+        ;;
+    "Analizar Textos")
+        echo "Analizar Texto"
+        ;;
+    "Salir")
+        echo "Salir"
+        exit 0
+        ;;
+    *)
+        echo "Opción elegida: $opcion"
+        ;;
+esac
+
+break
 
 done
 
-exit 0
+done
