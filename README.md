@@ -4,8 +4,9 @@
 
 ```
 $ cd 01-generador/
-$ docker build ...
-$ docker run ...
+$ docker build -t edp-generador .
+$ docker run -it -v $(pwd)/outputs-gen:/app/outputs/ edp-generador
+
 ```
 
 ## usuario

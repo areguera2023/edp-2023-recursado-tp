@@ -1,8 +1,14 @@
-FROM bash: 5.2.21
+FROM ubuntu:latest
 
-WORKDIR app
+ADD ["./scripts/", "/opt/"]
 
-ADD scripts
+ENTRYPOINT ["/opt/scripts/menu.sh"]
 
-ENTRYPOINT ["bash", "menu.sh"]
+#FROM bash: 5.2.21
+
+#WORKDIR app
+
+#ADD scripts
+
+#ENTRYPOINT ["bash", "menu.sh"]
 

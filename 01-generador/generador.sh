@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir -p /app/outputs/
+
 GENERADOR_RANDOM=$((RANDOM % 3))
 
 echo $GENERADOR_RANDOM
@@ -15,7 +17,4 @@ eval ${!RANDOM_EJECUTABLE}
 
 hash=$(md5sum ./file* | awk '{print $1}')
 
-
-
-
-mv file* $hash
+mv file* /app/outputs/$hash
