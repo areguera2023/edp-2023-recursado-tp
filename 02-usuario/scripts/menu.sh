@@ -8,14 +8,15 @@ do
 
 case "$opcion" in
     "Clasificar archivos")
-        ./clasificador.sh
+        $(dirname $0)/clasificador.sh
         ;;
     "Monitorear Sistema")
         echo "Elijo Monitorear el Sistema"
-        ./monitor.sh
+	$(dirname $0)/monitor.sh
         ;;
     "Analizar Textos")
         echo "Analizar Texto"
+	$(dirname $0)/submenu.sh
         ;;
     "Salir")
         echo "Salir"

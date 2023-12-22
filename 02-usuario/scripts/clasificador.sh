@@ -3,10 +3,10 @@
 
 # Crear carpetas si no existen:
 
-mkdir -p ../outputs
-mkdir -p ../outputs/img
-mkdir -p ../outputs/snd
-mkdir -p ../outputs/txt
+mkdir -p outputs
+mkdir -p outputs/img
+mkdir -p outputs/snd
+mkdir -p outputs/txt
 
 # Inicializar los tres contadores para los nombres de cada tipo de archivo:
 CONT_TXT=1
@@ -14,7 +14,7 @@ CONT_IMG=1
 CONT_SND=1
 
 # Iterar entre todos los archivos de salida del generador (hasheados):
-for i in ../files/*
+for i in files/*
 do
 
 

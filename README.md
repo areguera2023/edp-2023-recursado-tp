@@ -13,6 +13,6 @@ $ docker run -it -v $(pwd)/outputs-gen:/app/outputs/ edp-generador
 
 ```
 $ cd 02-usuario/
-$ docker build ...
-$ docker run ...
+$ docker build -t edp-usuario .
+$ docker run -it -v $(pwd)/../01-generador/outputs-gen/:/opt/files/ -v $(pwd)/outputs-user/:/opt/outputs/ -v $(pwd)/textos/:/opt/textos/ edp-usuario
 ```
